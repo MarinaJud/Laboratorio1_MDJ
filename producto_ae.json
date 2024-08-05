@@ -1,0 +1,26 @@
+{
+    "11111": {
+        "codigo": 11111,
+        "nombre": "Fideos",
+        "marca": "Marolio",
+        "precio": 1500.0,
+        "cantidad": 10,
+        "vencimiento": 12
+    },
+    "11112": {
+        "codigo": 11112,
+        "nombre": "Arroz",
+        "marca": "Amanda",
+        "precio": 1700.0,
+        "cantidad": 5,
+        "vencimiento": 12
+    },
+    "22222": {
+        "codigo": 22222,
+        "nombre": "Tableta digital de dibujo",
+        "marca": "Genius",
+        "precio": 30000.0,
+        "cantidad": 4,
+        "garantia": 12
+    }
+}
