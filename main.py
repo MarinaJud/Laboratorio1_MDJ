@@ -71,6 +71,19 @@ def eliminar_producto_por_codigo(gestion):
 
 def mostrar_todos_los_productos(gestion):
     print('=========== Listado completo de los productos =============')
+    try:
+        productos = gestion.leer_todos_los_productos()
+        for producto in productos:
+            if isinstance(producto, ProductoAlimento):
+                print(f'{producto.codigo} {producto.nombre} {producto.vencimiento}')
+            elif isinstance(producto, ProductoElectronico):
+                print(f'{producto.codigo} {producto.nombre} {producto.garantia}')
+    
+    except Exception as e:
+        print(f'Error al mostrar los productos {e}')
+
+
+
     for producto in gestion.leer_datos().values():
         if 'vencimiento' in producto:
             print(f"{producto['nombre']} - {producto['marca']} - Vencimiento {producto['vencimiento']} meses")
@@ -81,8 +94,7 @@ def mostrar_todos_los_productos(gestion):
 
 
 if __name__ == "__main__":
-    archivo_producto = 'producto_ae.json'
-    gestion = GestionProducto(archivo_producto)
+    gestion = GestionProducto()
 
     while True:
         limpiar_pantalla()
